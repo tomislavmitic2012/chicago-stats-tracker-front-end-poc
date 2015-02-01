@@ -40,7 +40,6 @@ I highly recommend using nvm to run node, follow the following instructions:
   4. in .bashrc add the following lines of code:
 
 	export NVM_DIR="/home/tomislav/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 	. ~/.nvm/nvm.sh
-	#enable aliases in sudo
 	alias sudo='sudo '
