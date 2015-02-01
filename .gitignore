@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+logs/
+npm-debug.log
+downloads/
+*.swp
+ssl/
+js/min/
+/css/min/
+*.sh~
