@@ -34,12 +34,12 @@ I highly recommend using nvm to run node, follow the following instructions:
   2. nvm install 0.11.16
   3. in .nvm/nvm.sh add the following lines:
 
-	alias node='$NVM_BIN/node'
-	alias npm='$NVM_BIN/npm'
+	alias node='$NVM_BIN/node'  
+	alias npm='$NVM_BIN/npm'  
 
   4. in .bashrc add the following lines of code:
 
-	export NVM_DIR="/home/tomislav/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-	. ~/.nvm/nvm.sh
+	export NVM_DIR="/home/tomislav/.nvm"  
+	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
+	. ~/.nvm/nvm.sh  
 	alias sudo='sudo '
