@@ -1,6 +1,6 @@
-/*! ThinkForex LLC - v1.0.0 - 01/31/2015
- * http://www.thinkforex.com/
- * Copyright (c) 2014 Thinkforex LLC */
+/* chicagostatstracker.com - v1.0.0 - 01/31/2015
+ * http://www.chicagostatstracker.com/
+ * Copyright (c) 2014 chicagostatstracker.com */
 
 if (process.argv[2] == null || process.argv[2].match(/minified|expanded/gi) == null) {
     console.log('you must provide a command line argument specifying whether to expand or minify css and js files -->\n\tminified for minified js and css resources\n\texpanded for expanded js and css resources');
@@ -13,7 +13,6 @@ var connect = require('connect')
     , url = require('url')
     , fs = require('fs')
     , vhost = require('vhost')
-    , routes = require('./routes')['routes']
     , serverGlobals
     , app;
 
@@ -24,7 +23,8 @@ var sslPortNumber = 443;
 var app_en = require('./app_en')['appen'];
 
 app = connect()
-    .use(vhost(serverGlobals.vhost_en, app_en));
+    .use(vhost(serverGlobals.vhost_en, app_en))
+    .use(vhost(serverGlobals.vhost_en2, app_en));
 
 var options = {
     key : fs.readFileSync('./ssl/key.pem')

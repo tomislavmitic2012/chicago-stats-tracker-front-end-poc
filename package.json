@@ -3,9 +3,11 @@
   , "version" : "0.0.1"
   , "private" : true
   , "dependencies" : {
-    "connect" : "latest"
-  , "serve-static" : "latest"
-  , "vhost" : "latest"
+    "serve-static" : "latest"
+    , "vhost" : "latest"
+    , "ejs" : "latest"
+    , "express" : "latest"
+    , "ms" : "latest"
   }
   , "devDependencies": {}
   , "scripts" : {
