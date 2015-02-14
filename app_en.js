@@ -39,7 +39,7 @@ app.get('/dashboard', function(req, res) {
 });
 
 app.get('*', function(req, res){
-    res.render('404.html');
+    res.render('index.html');
 });
 
 module.exports.appen = app;

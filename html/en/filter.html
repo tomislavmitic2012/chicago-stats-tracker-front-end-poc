@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChicagoStatsTracker</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap-table.css" rel="stylesheet" />
+  <link href="css/offcanvas.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+
+
+
+</head>
+<body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand" >Chicago Stat Tracker</div>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href = "signin.html" class="fa fa-sign-out fa-3x"></a></li>        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+
+  <!--1ST COLUMN-->
+  <div class="col-sm-3 col-md-2 sidebar">
+
+   <ul class="nav nav-sidebar"> 
+    <li><a class="active-menu" href="index.html"><i class="fa fa-database fa-3x"></i>myDataSet</a></li> 
+    <li><a  href="filter.html"><i class="fa fa-filter fa-3x"></i>FilterData</a></li>
+    <li><a  href="overView.html"><i class="fa fa-desktop fa-3x"></i>OverView</a></li>
+    <li><a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i>Charts</a></li>   
+    <li><a  href="myprofile.html"><i class="fa fa-user fa-3x"></i> myProfile </a></li>               
+  </ul>
+
+</div>
+<!--2ND COLUMN-->
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <p>This is a paragraph.</p>
+    <button onclick="appendText()">Append text</button>
+    <script>
+function appendText() {
+    var txt1 = "<p>Text.</p>";              // Create text with HTML
+    var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+    var txt3 = document.createElement("p");
+    txt3.innerHTML = "Text.";               // Create text with DOM
+    $("body").append(txt1, txt2, txt3);     // Append new elements
+}
+</script>
+</div>
+  
+</div>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script data-main="../js/bootstrap/main-main" src="../js/libs/require.js"></script>
+
+
+</body>
+</html>

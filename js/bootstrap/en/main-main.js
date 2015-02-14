@@ -34,12 +34,17 @@ require.config({
         },
         knockout: {
             deps: ['jquery']
+        },
+        knockout_mapping: {
+            deps: ['knockout','jquery']
         }
     },
-    paths: {
+    paths: { 
         jquery: 'libs/jquery',
+        jquery_metisMenu: 'libs/jquery.metisMenu',
         jqmobile: 'libs/jquery.mobile',
         knockout: 'libs/knockout',
+        knockout_mapping: 'libs/knockout.mapping',
         domReady: 'libs/domReady',
         cookie: 'libs/jquery.cookie',
         xdomain: 'libs/jquery.xdomainrequest',
@@ -56,17 +61,24 @@ require.config({
         html5shiv: 'libs/html5shiv',
         respond: 'libs/respond.min',
         text: 'libs/text',
-        utils: 'utils/utils'
+        utils: 'utils/utils',
+        filterViewModel: 'libs/viewmodel/filterViewModel',
+        myDataViewModel:'libs/viewmodel/myDataViewModel',
+        overviewViewModel:'libs/viewmodel/overviewViewModel',
+        jScript:'libs/scripts/jqueryScript'
+       
     }
 });
 
 define(function (require) {
 
     var $ = require('jquery');
+    var jScript = require('jScript');
     var jqmobile = require('jqmobile');
     var cookie = require('cookie');
     var domReady = require('domReady');
     var ko = require('knockout');
+    var koMap = require('knockout_mapping');
     var xdomain = require('xdomain');
     var parsley = require('parsley');
     var parsley_remote = require('parsley_remote');
@@ -80,6 +92,9 @@ define(function (require) {
     var chart = require('chart');
     var text = require('text');
     var utils = require('utils');
+    var myDataViewModel = require('myDataViewModel');
+    var filterViewModel = require('filterViewModel');
+    var overviewViewModel = require('overviewViewModel');
     var html5shiv;
     var respond;
     if (bowser.msie && bowser.version < 9) {
@@ -89,5 +104,17 @@ define(function (require) {
 
     domReady(function () {
         console.log('Hello World!');
+
     });
+
+    // mainViewModel = {
+
+        //myDataVM: new myDataViewModel(),
+        //filterVM: new filterViewModel()
+
+     //   }
+
+      // ko.applyBindings(mainViewModel);
+    
 });
+
