@@ -65,6 +65,7 @@ require.config({
         filterViewModel: 'libs/viewmodel/filterViewModel',
         myDataViewModel:'libs/viewmodel/myDataViewModel',
         overviewViewModel:'libs/viewmodel/overviewViewModel',
+        chartViewModel:'libs/viewmodel/chartViewModel',
         jScript:'libs/scripts/jqueryScript'
        
     }
@@ -95,6 +96,7 @@ define(function (require) {
     var myDataViewModel = require('myDataViewModel');
     var filterViewModel = require('filterViewModel');
     var overviewViewModel = require('overviewViewModel');
+    var chartViewModel = require('chartViewModel');
     var html5shiv;
     var respond;
     if (bowser.msie && bowser.version < 9) {

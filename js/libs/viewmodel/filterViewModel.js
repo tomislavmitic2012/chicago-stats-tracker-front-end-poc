@@ -11,8 +11,8 @@
 		    var self = this;
 		 
 		    self.filterItem = ko.observableArray([{}]); // initialize first row
-		    self.filterCriteria = ko.observableArray(this.jsonCriteriaData);
-		 
+		    self.filterDropdown =  ko.observableArray(jsonCriteriaData)
+
 		    self.filterItemLine = function() {
 		        self.filterItem.push({});
 		    };

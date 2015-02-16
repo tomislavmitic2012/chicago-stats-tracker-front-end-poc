@@ -48,7 +48,7 @@
     <li><a href="#" class="scroll-link" data-id="myDataSet"><i class="fa fa-database fa-3x"></i>myDataSet</a></li> 
     <li><a href="#" class="scroll-link" data-id="overView"><i class="fa fa-desktop fa-3x"></i>OverView</a></li>
     <li><a href="#" class="scroll-link" data-id="filterData"><i class="fa fa-filter fa-3x"></i>FilterData</a></li>
-    <li><a href="#" class="scroll-link" data-id="chart"><i class="fa fa-bar-chart-o fa-3x"></i>Charts</a></li>   
+    <li><a href="#" class="scroll-link" data-id="chartView"><i class="fa fa-bar-chart-o fa-3x"></i>Charts</a></li>   
     <li><a href="#" class="scroll-link" data-id="myProfile"><i class="fa fa-user fa-3x"></i> myProfile </a></li>               
   </ul>
 
@@ -111,33 +111,46 @@
         <div data-bind="foreach: filterItem">
           <div class="panel panel-default">
             <span class="filter-close-icon" data-bind="click: $parent.removeFilterLine"><a class="fa fa-times-circle-o fa-2x" ></a></span>
-            <form class="filter-form" role="form">
-              <div class="input-group">
-                <div class="input-group-btn">
-                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Criteria <span class="caret"></span></button>
+            <form class="form-inline">
+              <div class="form-group">         
+                   <select data-bind="options: $parent.filterDropdown"  class="form-control"></select>
+              </div><!-- /input-group -->
+              <div class="form-group">
+                  <input type="text" class="form-control" aria-label="...">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-               </div><!-- /btn-group -->
-               <input type="text" class="form-control" aria-label="...">
-             </div><!-- /input-group -->
-           </form>
-         </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <button id="addFilter" type="submit" class="btn btn-add-filter center-block" data-bind="click: filterItemLine"><i class="fa fa-plus fa-2x"></i>NewFilter</button>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+         <button type="submit" class="btn btn-lg btn-default-search center-block">Search</button>
        </div>
      </div>
    </div>
 
-   <div class="container">
+ </div><!--/.container-->
+</div>
+
+<div id="chartView" class="page-section">
+  <div class="container">
     <div class="row">
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <button id="addFilter" type="submit" class="btn btn-add-filter center-block" data-bind="click: filterItemLine"><i class="fa fa-plus fa-2x"></i>NewFilter</button>
-      </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-       <button type="submit" class="btn btn-lg btn-default-search center-block">Search</button>
-     </div>
-   </div>
- </div>
-
-</div><!--/.container-->
+   
+        <canvas id="myChart" width="1100" height="700"></canvas>
+     
+    </div>
+  </div>
 </div>
+<!--/.container-->
+</div>
+
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
