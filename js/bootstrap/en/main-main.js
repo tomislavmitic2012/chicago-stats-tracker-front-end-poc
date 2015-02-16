@@ -106,15 +106,6 @@ define(function (require) {
         console.log('Hello World!');
 
     });
-
-    // mainViewModel = {
-
-        //myDataVM: new myDataViewModel(),
-        //filterVM: new filterViewModel()
-
-     //   }
-
-      // ko.applyBindings(mainViewModel);
     
 });
 

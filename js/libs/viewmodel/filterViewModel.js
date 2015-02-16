@@ -1,45 +1,27 @@
 	// Main viewmodel class
-	define(['knockout','knockout_mapping','jquery'], function(ko,mapping,$) {
+	define(['knockout','knockout_mapping'], function(ko,mapping) {
 
 
 	    // Class to represent a row in the seat reservat
 
-	    
-
-	    $.getJSON("https://data.cityofchicago.org/resource/x2n5-8w5q.json", function(data) {
+	    var jsonCriteriaData = ['data','ID','year'];
 
 
+	    function FilterViewModel() {
+		    var self = this;
+		 
+		    self.filterItem = ko.observableArray([{}]); // initialize first row
+		    self.filterCriteria = ko.observableArray(this.jsonCriteriaData);
+		 
+		    self.filterItemLine = function() {
+		        self.filterItem.push({});
+		    };
+		 
+		    self.removeFilterLine = function() {
+		        self.filterItem.remove(this);
+		    }
+		}
+ 
 
-	    	var viewModel = {
-	    		crimes: mapping.fromJS(data),
-	    		shouldShowMessage: ko.observable(false),
-	    		shouldShowFilter: ko.observable(true),
-	    		shouldShowOverviewTable: ko.observable(false),
-	    		overviewTabClick: function(){
-	    			this.shouldShowOverviewTable(true),
-	    			this.shouldShowFilter(false)
-	    		},
-	    		filterTabClick: function(){
-	    			this.filterTabClick(true),
-	    			this.shouldShowOverviewTable(false)
-	    		},
-	    		addNewFilterClick: function(){
-	    			$('#filterWrapper div:first')
-	    			.clone()
-	    			.append('')
-	    			.appendTo($('#filterWrapper'));
-	    		},
-	    		removeFilterClick: function(){
-	    			alert('hello');
-
-	    		}
-	    	}
-
-
-	    	ko.applyBindings(viewModel);
-
-
-	    });
-
-
+	ko.applyBindings(new FilterViewModel(),document.getElementById("filterData")); 	
 });
