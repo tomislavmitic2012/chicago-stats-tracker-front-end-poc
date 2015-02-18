@@ -113,48 +113,48 @@
             <span class="filter-close-icon" data-bind="click: $parent.removeFilterLine"><a class="fa fa-times-circle-o fa-2x" ></a></span>
             <form class="form-inline">
               <div class="form-group">         
-                   <select data-bind="options: $parent.filterDropdown"  class="form-control"></select>
-              </div><!-- /input-group -->
-              <div class="form-group">
-                  <input type="text" class="form-control" aria-label="...">
-              </div>
-            </form>
-          </div>
+               <select data-bind="options: $parent.filterDropdown"  class="form-control"></select>
+             </div><!-- /input-group -->
+             <div class="form-group">
+              <input type="text" class="form-control" aria-label="...">
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <button id="addFilter" type="submit" class="btn btn-add-filter center-block" data-bind="click: filterItemLine"><i class="fa fa-plus fa-2x"></i>NewFilter</button>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-         <button type="submit" class="btn btn-lg btn-default-search center-block">Search</button>
-       </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <button id="addFilter" type="submit" class="btn btn-add-filter center-block" data-bind="click: filterItemLine"><i class="fa fa-plus fa-2x"></i>NewFilter</button>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+       <button type="submit" class="btn btn-lg btn-default-search center-block">Search</button>
      </div>
    </div>
+ </div>
 
- </div><!--/.container-->
+</div><!--/.container-->
 </div>
 
 <div id="chartView" class="page-section">
   <div class="container">
     <div class="row">
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-   
-        <canvas id="myChart" width="1100" height="700"></canvas>
-     
+        <div class="panel panel-info" >
+          <canvas id="myChart" width="900" height="700"></canvas>
+        </div>       
+      </div>
     </div>
   </div>
-</div>
-<!--/.container-->
+  <!--/.container-->
 </div>
 
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script data-main="../js/bootstrap/main-main" src="../js/libs/require.js"></script>
+<script data-main="js/bootstrap/main-main" src="js/libs/require.js"></script>
 </body>
 </html>

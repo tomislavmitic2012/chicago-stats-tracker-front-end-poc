@@ -2,19 +2,19 @@
  * Base structure
  */
 
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
+ /* Move down content because we have a fixed navbar that is 50px tall */
+ body {
   padding-top: 50px;
 }
 
 .filter-container{
   margin-top: 80px;
-    border: 1px solid #D8DFE6;
-    padding: 40px 40px; 
-    background: #F0F8FF;
-    width: 200px;
-    height: 150px;
-    border-radius: 15px;
+  border: 1px solid #D8DFE6;
+  padding: 40px 40px; 
+  background: #F0F8FF;
+  width: 200px;
+  height: 150px;
+  border-radius: 15px;
 }
 .filter-form{
 
@@ -58,7 +58,7 @@ body {
  * Global add-ons
  */
 
-.sub-header {
+ .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
@@ -67,7 +67,7 @@ body {
  * Top navigation
  * Hide default border to remove 1px line.
  */
-.navbar-fixed-top {
+ .navbar-fixed-top {
   border: 0;
 }
 
@@ -75,8 +75,8 @@ body {
  * Sidebar
  */
 
-/* Hide for mobile, show later */
-.sidebar {
+ /* Hide for mobile, show later */
+ .sidebar {
   display: none;
 }
 @media (min-width: 738px) {
@@ -89,31 +89,31 @@ body {
     display: block;
     padding: 0px;
     overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    overflow-y: auto; 
     background-color: #f5f5f5;
     border-right: 1px solid #eee;
   }
 }
 /* Icon */
 .fa{
-  
+
   padding: 20px;
   color: #79b6bf;
 
 }
 
 .filter-close-icon{
-float: right;
-margin-top: -20px;
-margin-right: -20px;
+  float: right;
+  margin-top: -20px;
+  margin-right: -20px;
 }
 /* Sidebar navigation */
 .col-sm-3 {
 
-    padding-top: 100px;
-    background: #404667;
-    width: 250px;
-    border: 0px;
+  padding-top: 100px;
+  background: #404667;
+  width: 250px;
+  border: 0px;
 }
 .navbar-inverse {
   background: #f1f2f4;
@@ -138,13 +138,13 @@ margin-right: -20px;
 } 
 
 .nav-sidebar {
-  margin-right: 0px; /* 20px padding + 1px border */
+  margin-right: 0px; 
   margin-bottom: 0px;
   margin-left: 0px;
 
 }
 .nav-sidebar > li > a {
- 
+
   font-size: 20px;
   font-weight: bold;
   border-bottom: 1px solid #5b5e6f;   
@@ -177,7 +177,7 @@ margin-right: -20px;
  * Main content
  */
 
-.main {
+ .main {
   padding: 20px;
 }
 @media (min-width: 768px) {
@@ -212,8 +212,8 @@ margin-right: -20px;
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
 }

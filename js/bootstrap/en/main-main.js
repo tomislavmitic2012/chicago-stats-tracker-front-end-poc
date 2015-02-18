@@ -66,7 +66,7 @@ require.config({
         myDataViewModel:'libs/viewmodel/myDataViewModel',
         overviewViewModel:'libs/viewmodel/overviewViewModel',
         chartViewModel:'libs/viewmodel/chartViewModel',
-        jScript:'libs/scripts/jqueryScript'
+        navigationScroll:'libs/scripts/navigationScroll'
        
     }
 });
@@ -74,7 +74,7 @@ require.config({
 define(function (require) {
 
     var $ = require('jquery');
-    var jScript = require('jScript');
+    var navigationScroll = require('navigationScroll');
     var jqmobile = require('jqmobile');
     var cookie = require('cookie');
     var domReady = require('domReady');
@@ -105,7 +105,22 @@ define(function (require) {
     }
 
     domReady(function () {
-        console.log('Hello World!');
+
+        // Call navigation scroll functions
+        navigationScroll(); 
+
+        //display chart
+        chartViewModel();
+
+        //load and add filter box
+        filterViewModel();
+
+        //display my data set
+        myDataViewModel();
+
+        //display overview table
+        overviewViewModel();
+       
 
     });
     

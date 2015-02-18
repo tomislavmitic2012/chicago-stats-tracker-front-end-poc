@@ -1,27 +1,29 @@
-	// Main viewmodel class
-	define(['knockout','knockout_mapping'], function(ko,mapping) {
+
+define(['knockout','knockout_mapping'], function(ko,mapping) {
 
 
-	    // Class to represent a row in the seat reservat
+	return function FilterViewModel(){
 
-	    var jsonCriteriaData = ['data','ID','year'];
+			var jsonCriteriaData = ['data','ID','year'];
+
+			function FilterViewModel() {
+			 	var self = this;
+
+		   		self.filterItem = ko.observableArray([{}]); 
+		    	self.filterDropdown =  ko.observableArray(jsonCriteriaData)
+
+		    	self.filterItemLine = function() {
+		    		self.filterItem.push({});
+		   		 };
+
+		   		 self.removeFilterLine = function() {
+		    		self.filterItem.remove(this);
+		   		}
+			}
 
 
-	    function FilterViewModel() {
-		    var self = this;
-		 
-		    self.filterItem = ko.observableArray([{}]); // initialize first row
-		    self.filterDropdown =  ko.observableArray(jsonCriteriaData)
+			ko.applyBindings(new FilterViewModel(),document.getElementById("filterData")); 	
 
-		    self.filterItemLine = function() {
-		        self.filterItem.push({});
-		    };
-		 
-		    self.removeFilterLine = function() {
-		        self.filterItem.remove(this);
-		    }
-		}
- 
+	}
 
-	ko.applyBindings(new FilterViewModel(),document.getElementById("filterData")); 	
 });

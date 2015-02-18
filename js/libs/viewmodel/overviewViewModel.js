@@ -1,12 +1,10 @@
 	// Main viewmodel class
 	define(['knockout','knockout_mapping','jquery'], function(ko,mapping,$) {
 
+		return function overViewViewModel(){
 
-	    // Class to represent a row in the seat reservat
 
-	    
-
-	   	    var data = [
+			var data = [
 
 	    		{
 				  "beat" : "731",
@@ -59,7 +57,9 @@
 	    	ko.applyBindings(_viewModel,document.getElementById("overView"));
 
 
-	    	
-	    
+
+		}
+
+	   	       
 
 });
